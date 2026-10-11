@@ -1,1 +1,166 @@
 
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b12">
+<title>Studio Balap Joko Tingkir</title>
+<style>
+:root{--bg:#080b12;--panel:#101621;--line:#222d3d;--blue:#42a5ff;--text:#edf4ff;--muted:#8b9ab0}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,sans-serif}
+header{padding:22px 18px;border-bottom:1px solid var(--line);background:#0c111b}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:45px;height:45px;border-radius:13px;background:linear-gradient(135deg,#42a5ff,#1555ba);display:grid;place-items:center;font-weight:900;color:white;font-size:20px}
+h1{font-size:17px;margin:0 0 5px}
+.subtitle{font-size:11px;color:var(--muted)}
+.status{margin-top:18px;font-size:12px;color:#91d7ad}
+nav{display:flex;gap:8px;padding:13px;overflow-x:auto;border-bottom:1px solid var(--line);background:#0b1019}
+nav button{white-space:nowrap;border:1px solid var(--line);background:#111824;color:#aab8ca;padding:11px 14px;border-radius:9px;font-size:12px}
+nav button.active{background:#17365a;border-color:#398de0;color:#fff}
+main{padding:20px 15px;max-width:1000px;margin:auto}
+.eyebrow{font-size:11px;color:var(--blue);letter-spacing:2px;font-weight:bold}
+h2{font-size:25px;margin:9px 0}
+.desc{font-size:13px;line-height:1.7;color:var(--muted)}
+.hero{padding:22px;border:1px solid #24436a;border-radius:17px;background:linear-gradient(135deg,#14253b,#101621 70%);margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:18px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:16px;min-width:0}
+.card .symbol{font-size:21px;margin-bottom:12px}
+.card h3{font-size:13px;margin:0 0 7px}
+.card p{font-size:11px;color:var(--muted);line-height:1.6;margin:0}
+.section-title{font-size:16px;margin:24px 0 12px}
+.action{display:inline-block;background:var(--blue);color:#07111e;border:0;border-radius:9px;padding:11px 15px;font-weight:bold;font-size:12px;margin-top:12px}
+button,a{cursor:pointer}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:17px;margin-bottom:12px}
+.panel h3{font-size:14px;margin:0 0 8px}
+.panel p{font-size:12px;color:var(--muted);line-height:1.7}
+.field{width:100%;padding:12px;border-radius:8px;border:1px solid var(--line);background:#090e16;color:white;margin:6px 0 12px}
+label{font-size:12px;color:#b8c6d9}
+.primary{border:0;background:var(--blue);padding:12px 15px;border-radius:8px;font-weight:bold;color:#07111e}
+.note{font-size:11px;color:var(--muted);line-height:1.7}
+footer{padding:25px 16px;text-align:center;color:#65758b;font-size:11px;border-top:1px solid var(--line);margin-top:30px}
+.hidden{display:none}
+@media(min-width:650px){main{padding:30px 24px}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{padding:32px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="brand">
+  <div class="logo">JK</div>
+  <div><h1>STUDIO BALAP JOKO TINGKIR</h1><div class="subtitle">CREATIVE STUDIO · INTERNAL DASHBOARD</div></div>
+ </div>
+ <div class="status">● Dashboard Studio</div>
+</header>
+<nav id="nav">
+ <button class="active" data-page="dashboard">Dashboard</button>
+ <button data-page="channels">Channel YouTube</button>
+ <button data-page="employees">Data Karyawan</button>
+ <button data-page="production">Produksi Konten</button>
+ <button data-page="dolan">[AM] Pulang Kerja Dolan</button>
+ <button data-page="announcements">Pengumuman</button>
+</nav>
+<main>
+<section id="dashboard" class="page">
+ <div class="hero">
+  <div class="eyebrow">WELCOME TO THE STUDIO</div>
+  <h2>Kerja Kreatif.<br>Hasil Maksimal.</h2>
+  <p class="desc">Pusat informasi channel, tim, produksi konten, serta aktivitas Studio Balap Joko Tingkir.</p>
+ </div>
+ <div class="grid">
+  <div class="card"><div class="symbol">▶</div><h3>Channel YouTube</h3><p>Kelola daftar channel, logo, tautan, dan penanggung jawab.</p></div>
+  <div class="card"><div class="symbol">♙</div><h3>Data Karyawan</h3><p>Informasi anggota tim dan pembagian tugas.</p></div>
+  <div class="card"><div class="symbol">✦</div><h3>Produksi Konten</h3><p>Pantau ide, proses editing, dan status publikasi.</p></div>
+  <div class="card"><div class="symbol">🎮</div><h3>Pulang Kerja Dolan</h3><p>Informasi jadwal dan kegiatan PlayStation.</p></div>
+  <div class="card"><div class="symbol">▤</div><h3>Pengumuman</h3><p>Catatan penting dan informasi internal studio.</p></div>
+  <div class="card"><div class="symbol">⌁</div><h3>Ruang Kerja</h3><p>Satu halaman untuk membantu aktivitas studio lebih teratur.</p></div>
+ </div>
+ <h3 class="section-title">Akses Cepat</h3>
+ <div class="panel"><h3>Mulai dari data channel</h3><p>Tambahkan daftar channel dan nama penanggung jawab melalui menu Channel YouTube.</p><button class="primary" onclick="showPage('channels')">Buka Channel →</button></div>
+</section>
+<section id="channels" class="page hidden">
+ <div class="eyebrow">CHANNEL MANAGEMENT</div><h2>Channel YouTube</h2>
+ <p class="desc">Catat channel yang dikelola studio beserta karyawan penanggung jawabnya.</p>
+ <div class="panel">
+  <h3>Tambah Channel</h3>
+  <label>Nama Channel</label><input id="cname" class="field" placeholder="Contoh: Nama Channel">
+  <label>Link YouTube</label><input id="clink" class="field" placeholder="https://youtube.com/@namachannel">
+  <label>URL Logo (opsional)</label><input id="clogo" class="field" placeholder="https://...">
+  <label>Penanggung Jawab</label><input id="cworker" class="field" placeholder="Nama karyawan">
+  <button class="primary" onclick="addChannel()">Tambah ke Daftar</button>
+ </div>
+ <div id="channelList"></div>
+ <p class="note">Versi awal ini menyimpan data di browser perangkat yang digunakan. Data belum tersinkron otomatis ke perangkat lain.</p>
+</section>
+<section id="employees" class="page hidden">
+ <div class="eyebrow">TEAM DIRECTORY</div><h2>Data Karyawan</h2>
+ <p class="desc">Catat anggota tim dan jabatan atau tanggung jawabnya.</p>
+ <div class="panel">
+  <label>Nama Karyawan</label><input id="ename" class="field" placeholder="Nama lengkap">
+  <label>Jabatan / Tugas</label><input id="erole" class="field" placeholder="Contoh: Video Editor">
+  <button class="primary" onclick="addEmployee()">Tambah Karyawan</button>
+ </div>
+ <div id="employeeList"></div>
+</section>
+<section id="production" class="page hidden">
+ <div class="eyebrow">CONTENT WORKFLOW</div><h2>Produksi Konten</h2>
+ <p class="desc">Catat pekerjaan konten yang sedang berjalan.</p>
+ <div class="panel">
+  <label>Judul / Ide Konten</label><input id="pname" class="field" placeholder="Judul konten">
+  <label>Channel Tujuan</label><input id="pchannel" class="field" placeholder="Nama channel">
+  <label>Penanggung Jawab</label><input id="pworker" class="field" placeholder="Nama karyawan">
+  <label>Status Produksi</label><select id="pstatus" class="field"><option>Ide</option><option>Proses Editing</option><option>Review</option><option>Siap Upload</option><option>Sudah Terbit</option></select>
+  <button class="primary" onclick="addProduction()">Tambah Produksi</button>
+ </div>
+ <div id="productionList"></div>
+</section>
+<section id="dolan" class="page hidden">
+ <div class="eyebrow">AFTER WORK · PLAYSTATION</div><h2>[AM] Pulang Kerja Dolan</h2>
+ <p class="desc">Ruang informasi jadwal main, daftar pemain, dan kegiatan setelah kerja.</p>
+ <div class="panel">
+  <label>Nama Kegiatan</label><input id="dname" class="field" placeholder="Contoh: Mabar malam Jumat">
+  <label>Tanggal</label><input id="ddate" type="date" class="field">
+  <label>Jam</label><input id="dtime" type="time" class="field">
+  <label>Catatan / Pemain</label><textarea id="dnote" class="field" placeholder="Catatan kegiatan" rows="3"></textarea>
+  <button class="primary" onclick="addDolan()">Simpan Jadwal</button>
+ </div>
+ <div id="dolanList"></div>
+</section>
+<section id="announcements" class="page hidden">
+ <div class="eyebrow">STUDIO NOTICEBOARD</div><h2>Pengumuman</h2>
+ <p class="desc">Catatan dan pengingat untuk kegiatan internal studio.</p>
+ <div class="panel">
+  <label>Judul Pengumuman</label><input id="aname" class="field" placeholder="Judul pengumuman">
+  <label>Isi Pengumuman</label><textarea id="atext" class="field" rows="4" placeholder="Tulis informasi di sini"></textarea>
+  <button class="primary" onclick="addAnnouncement()">Terbitkan Catatan</button>
+ </div>
+ <div id="announcementList"></div>
+</section>
+</main>
+<footer>STUDIO BALAP JOKO TINGKIR<br><br>Internal Studio Dashboard · Versi Awal</footer>
+<script>
+const $=id=>document.getElementById(id);
+const keys={channels:"sbjk_channels",employees:"sbjk_employees",production:"sbjk_production",dolan:"sbjk_dolan",announcements:"sbjk_announcements"};
+function read(k){try{return JSON.parse(localStorage.getItem(keys[k])||"[]")}catch(e){return []}}
+function save(k,data){localStorage.setItem(keys[k],JSON.stringify(data))}
+function esc(s){return String(s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function showPage(id){document.querySelectorAll(".page").forEach(p=>p.classList.add("hidden"));$(id).classList.remove("hidden");document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("active",b.dataset.page===id));window.scrollTo(0,0)}
+document.querySelectorAll("nav button").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.page)));
+function card(title,details,link,logo){return `<div class="panel"><div style="display:flex;gap:12px;align-items:center">${logo?`<img src="${esc(logo)}" alt="" style="width:45px;height:45px;object-fit:cover;border-radius:10px" onerror="this.style.display='none'">`:""}<div><h3>${esc(title)}</h3><p>${esc(details)}</p>${link?`<a href="${esc(link)}" target="_blank" rel="noopener" style="color:#42a5ff;font-size:12px">Buka tautan ↗</a>`:""}</div></div></div>`}
+function addChannel(){let name=$("cname").value.trim();if(!name)return alert("Isi nama channel dulu.");let a=read("channels");a.unshift({name,link:$("clink").value.trim(),logo:$("clogo").value.trim(),worker:$("cworker").value.trim()});save("channels",a);["cname","clink","clogo","cworker"].forEach(id=>$(id).value="");render()}
+function addEmployee(){let name=$("ename").value.trim();if(!name)return alert("Isi nama karyawan dulu.");let a=read("employees");a.unshift({name,role:$("erole").value.trim()});save("employees",a);$("ename").value="";$("erole").value="";render()}
+function addProduction(){let name=$("pname").value.trim();if(!name)return alert("Isi judul konten dulu.");let a=read("production");a.unshift({name,channel:$("pchannel").value.trim(),worker:$("pworker").value.trim(),status:$("pstatus").value});save("production",a);["pname","pchannel","pworker"].forEach(id=>$(id).value="");render()}
+function addDolan(){let name=$("dname").value.trim();if(!name)return alert("Isi nama kegiatan dulu.");let a=read("dolan");a.unshift({name,date:$("ddate").value,time:$("dtime").value,note:$("dnote").value.trim()});save("dolan",a);["dname","ddate","dtime","dnote"].forEach(id=>$(id).value="");render()}
+function addAnnouncement(){let name=$("aname").value.trim();if(!name)return alert("Isi judul pengumuman dulu.");let a=read("announcements");a.unshift({name,note:$("atext").value.trim()});save("announcements",a);$("aname").value="";$("atext").value="";render()}
+function render(){
+$("channelList").innerHTML=read("channels").map(x=>card(x.name,"Penanggung jawab: "+(x.worker||"Belum ditentukan"),x.link,x.logo)).join("")||'<p class="desc">Belum ada channel. Tambahkan melalui formulir di atas.</p>';
+$("employeeList").innerHTML=read("employees").map(x=>card(x.name,x.role||"Tugas belum diisi")).join("")||'<p class="desc">Belum ada data karyawan.</p>';
+$("productionList").innerHTML=read("production").map(x=>card(x.name,"Channel: "+(x.channel||"-")+" · PIC: "+(x.worker||"-")+" · Status: "+x.status)).join("")||'<p class="desc">Belum ada produksi yang dicatat.</p>';
+$("dolanList").innerHTML=read("dolan").map(x=>card(x.name,(x.date||"Tanggal belum diisi")+" · "+(x.time||"Jam belum diisi")+" · "+(x.note||"Tanpa catatan"))).join("")||'<p class="desc">Belum ada jadwal kegiatan.</p>';
+$("announcementList").innerHTML=read("announcements").map(x=>card(x.name,x.note||"")).join("")||'<p class="desc">Belum ada pengumuman.</p>';
+}
+render();
+</script>
+</body>
+</html>
